@@ -1,0 +1,11 @@
+diffusers 
+transformers 
+torch 
+torchvision 
+torchaudio 
+accelerate 
+urllib3 
+jupyter 
+ipywidgets 
+tqdm 
+peft
