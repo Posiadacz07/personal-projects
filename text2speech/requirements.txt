@@ -1,0 +1,9 @@
+transformers
+accelerate
+torch 
+torchvision 
+torchaudio 
+scipy
+
+# To download model to local dir
+huggingface_hub
