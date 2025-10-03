@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Todo List (Todoist)</title>
+    <style>
+        /* Minimal CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        #chart-container {
+            width: 50%;
+            margin: 0 auto 20px auto;
+            position: relative;
+        }
+        
+        #chart-svg-overlay {
+            position: absolute;
+            z-index: 10; 
+        }
+
+        #chart-svg-overlay img {
+            width: 100%; 
+            height: 100%;
+            object-fit: contain; 
+        }
+
+        #addTaskForm {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        #taskInput {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+
+        #addButton {
+            padding: 10px 15px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #addButton:hover {
+            background-color: #4cae4c;
+        }
+
+        #taskList {
+            list-style: none;
+            padding: 0;
+        }
+
+        .taskItem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            background-color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .taskItem:last-child {
+            border-bottom: none;
+        }
+        
+        .completed {
+            text-decoration: line-through;
+            color: #999;
+            background-color: #f9f9f9;
+        }
+        
+        .taskItem input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        
+        .taskText {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>TODO List</h1>
+        
+        <div id="chart-container">
+            <div id="chart-svg-overlay">
+                <img id="progressImage" src="images/flower.png" alt="Progress icon"> 
+            </div>
+            <canvas id="taskChart"></canvas>
+        </div>
+
+        <form id="addTaskForm">
+            <input type="text" id="taskInput" placeholder="Add new task..." required>
+            <button type="submit" id="addButton">Add</button>
+        </form>
+
+        <ul id="taskList">
+            </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
