@@ -34,10 +34,14 @@
             margin: 0 auto 20px auto;
             position: relative;
         }
+        #taskChart {
+            z-index: 5;
+            position: relative; /* Upewnia, że z-index działa poprawnie */
+        }
         
         #chart-svg-overlay {
             position: absolute;
-            z-index: 10; 
+            z-index: 1; 
         }
 
         #chart-svg-overlay img {
@@ -115,7 +119,7 @@
         
         <div id="chart-container">
             <div id="chart-svg-overlay">
-                <img id="progressImage" src="images/flower.png" alt="Progress icon"> 
+                <img id="progressImage" src="images/0.png" alt="Progress icon"> 
             </div>
             <canvas id="taskChart"></canvas>
         </div>

@@ -18,12 +18,12 @@ let taskChart;
 
 // Paths for images with progress
 const progressImages = {
-    0: 'images/flower.png',
-    20: 'images/progress1.png',
-    40: 'images/progress2.png',
-    60: 'images/progress3.png',
-    80: 'images/progress4.png',
-    100: 'images/progress5.png',
+    0: 'images/0.png',
+    20: 'images/1.png',
+    40: 'images/2.png',
+    60: 'images/3.png',
+    80: 'images/4.png',
+    100: 'images/5.png',
 };
 
 /**
